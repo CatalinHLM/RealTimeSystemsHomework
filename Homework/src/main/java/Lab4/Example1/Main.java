@@ -1,4 +1,4 @@
-package Lab4.App1;
+package Lab4.Example1;
 
 public class Main {
     public static void main(String[] args) {
