@@ -14,7 +14,7 @@ public class ExecutionThread extends Thread {
     }
 
     public void run() {
-        System.out.println(this.getName() + " - STATE 1");
+        System.out.println(this.getName() + " - dublu - STATE 1");
 
         synchronized (monitor1) {
             synchronized (monitor2) {
@@ -31,13 +31,11 @@ public class ExecutionThread extends Thread {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println(this.getName() + " - released monitor");
+                System.out.println(this.getName() + " - dublu - released monitor");
             }
         }
 
-
-
-        System.out.println(this.getName() + " - STATE 3");
+        System.out.println(this.getName() + " - dublu - STATE 3");
     }
 
 

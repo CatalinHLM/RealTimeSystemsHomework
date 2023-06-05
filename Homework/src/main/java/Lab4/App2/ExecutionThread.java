@@ -23,23 +23,20 @@ public class ExecutionThread extends Thread {
 
         synchronized (monitor1) {
             synchronized (monitor2){
-            System.out.println(this.getName() + " - STATE 2");
-            k = (int) Math.round(Math.random()*(activity_max2 - activity_min2) + activity_min2);
-            for (int i = 0; i < k * 100000; i++)
-            {
-                i++; i--;
-            }
-
+                System.out.println(this.getName() + " - STATE 2");
+                k = (int) Math.round(Math.random()*(activity_max2 - activity_min2) + activity_min2);
+                for (int i = 0; i < k * 100000; i++) {
+                    i++;
+                    i--;
+                }
 
                 System.out.println(this.getName() + " - STATE 3");
-
                 try
                 {
                     Thread.sleep(500*this.timed);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-
             }
         }
         System.out.println(this.getName() + " - STATE 4");
